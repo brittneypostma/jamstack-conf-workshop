@@ -5,12 +5,12 @@
 		const res = await fetch('/posts.json');
 		if (res.ok) {
 			const posts = await res.json();
+			return {
+				props: {
+					posts
+				}
+			};
 		}
-		return {
-			props: {
-				posts
-			}
-		};
 	}
 </script>
 

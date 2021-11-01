@@ -1,3 +1,4 @@
+import preprocess from 'svelte-preprocess';
 import path from 'path';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -21,7 +22,13 @@ const config = {
 				}
 			}
 		}
-	}
+	},
+
+	preprocess: [
+		preprocess({
+			postcss: true
+		})
+	]
 };
 
 export default config;

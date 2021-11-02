@@ -2,17 +2,16 @@
 	<title>{title}</title>
 </svelte:head>
 
-{#if post.coverImage?.url}
-	<div class="sticky top-0 mb-12">
-		<img src={post.coverImage.url} alt={`Cover Image for ${post.title}`} />
-	</div>
-{:else}
-	<div class="sticky top-0 mb-10">
-		<img src={`/img/default-cover-image.jpg`} alt={`Default Cover Image`} />
-	</div>
-{/if}
-
 <article class="prose mx-auto">
+	{#if post.coverImage?.url}
+		<div class="mb-10">
+			<img src={post.coverImage.url} alt={`Cover Image for ${post.title}`} />
+		</div>
+	{:else}
+		<div class="mb-10">
+			<img src={`/img/default-cover-image.jpg`} alt={`Default Cover Image`} />
+		</div>
+	{/if}
 	<h1 class="text-4xl font-semibold">{post.title}</h1>
 
 	<div class="grid sm:flex sm:justify-between items-center bg-accent text-gray-900 p-5">

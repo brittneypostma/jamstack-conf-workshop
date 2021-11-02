@@ -8,7 +8,7 @@
 		<a
 			sveltekit:prefetch
 			href={`/posts/${post.slug}`}
-			class="card bg-gray-800 text-center shadow-2xl transition-colors hover:shadow-md hover:bg-gray-900"
+			class="card bg-secondary text-center shadow-2xl transition-colors hover:shadow-md hover:bg-secondary-focus"
 		>
 			<li>
 				<figure>

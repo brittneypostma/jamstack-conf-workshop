@@ -3,7 +3,11 @@ const config = {
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			gridTemplateColumns: {
+				fit: `repeat(auto-fit, minmax(0, 32rem))`
+			}
+		}
 	},
 
 	plugins: [require('@tailwindcss/typography'), require('daisyui')]
